@@ -9,6 +9,6 @@ The resulting file can be imported into a diagram at www.diagram.ly.
 
 See example page [here](http://miebach.github.com/diagram-textbox-wizard/).
 
-Each Line will become a textbox in the resulting diagram. 
+Each line will become a textbox in the resulting diagram. 
 
-Create multiple boxes in one line and separate them with commas.
+You can also create multiple boxes on one line by separating them with commas.
