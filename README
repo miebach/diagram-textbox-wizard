@@ -1,0 +1,14 @@
+Diagram Textbox Wizard
+======================
+
+Enter some words into a text fields and they are converted into a simple 
+diagram, consisting of text boxes. This can be used as a rapid starting point for
+diagrams. 
+
+The resulting file can be imported into a diagram at www.diagram.ly.
+
+See example page [here](http://miebach.github.com/diagram-textbox-wizard/).
+
+Each Line will become a textbox in the resulting diagram. 
+
+Create multiple boxes in one line and separate them with commas.
