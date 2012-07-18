@@ -1,0 +1,6 @@
+[submodule "deps/JavaScript-Templates"]
+	path = deps/JavaScript-Templates
+	url = git://github.com/miebach/JavaScript-Templates.git
+[submodule "deps/Downloadify"]
+	path = deps/Downloadify
+	url = git://github.com/miebach/Downloadify.git
