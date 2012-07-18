@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+	<head>
+		<title>Diagram Textbox Wizaard</title>
+
+    <!-- GITHUB HOSTED:		
+      <script src="https://raw.github.com/miebach/JavaScript-Templates/master/tmpl.min.js"type="text/javascript" ></script>
+      <script src="https://github.com/miebach/Downloadify/raw/master/js/swfobject.js" type="text/javascript"></script>
+  		<script src="https://github.com/miebach/Downloadify/raw/master/js/downloadify.min.js" type="text/javascript"></script>
+      <script type="text/javascript">
+  			var swfPath = 'https://github.com/miebach/Downloadify/raw/master/media/downloadify.swf';
+  			var downloadImagePath = 'https://github.com/miebach/Downloadify/raw/master/images/download.png';
+      </script>
+    -->
+
+    <!-- local dependencies -->
+
+    <script src="deps/JavaScript-Templates/tmpl.min.js" type="text/javascript"></script>
+		<script src="deps/Downloadify/js/swfobject.js" type="text/javascript"></script>
+		<script src="deps/Downloadify/js/downloadify.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+			var swfPath = 'deps/Downloadify/media/downloadify.swf';
+			var downloadImagePath = 'deps/Downloadify/images/download.png';
+    </script>
+
+
+    <script src="script.js" type="text/javascript"></script>
+
+		<style type="text/css" media="screen">
+			body {background: #fff; width: 500px; margin: 20px auto; }
+			label, input, textarea, h1, h2, p { font-family: Arial, sans-serif; font-size: 12pt; }
+			input, textarea { border: solid 1px #aaa; padding: 4px; width: 98%; }
+			label { font-weight: bold; }
+			h1 { font-size: 30pt; font-weight: bold; letter-spacing: -1px; }
+			h2 { font-size: 14pt; }
+			pre { overflow: auto; padding: 10px; background: #222; color: #ccc; }
+		</style>
+
+
+	</head>
+
+	<body onload="load(swfPath, downloadImagePath);">
+
+    <script type="text/x-tmpl" id="tpl-page-header">
+      <mxGraphModel dx="800" dy="800" grid="1" guides="1" tooltips="1" connect="1" fold="1" page="1" pageScale="1" 
+        pageWidth="{%=o.page_width%}" pageHeight="{%=o.page_height%}" style="default-style2"><root>
+      <mxCell id="0"/>
+      <mxCell id="1" parent="0"/>
+    </script>
+
+    <script type="text/x-tmpl" id="tpl-textbox">
+      <mxCell id="{%=o.id%}" value="{%=o.value%}" parent="{%=o.parent%}" vertex="1">
+        <mxGeometry x="{%=o.x%}" y="{%=o.y%}" width="{%=o.width%}" height="{%=o.height%}" as="geometry"/>
+      </mxCell>
+    </script>
+
+
+    <script type="text/x-tmpl" id="tpl-page-footer">
+      </root></mxGraphModel>        
+    </script>
+
+
+
+		<h1>Diagram Textbox Wizard</h1>
+		
+		<p>The resulting file can be imported into a diagram at <a href="http://www.diagram.ly/" target="_blank">www.diagram.ly</a>.</p>
+
+		<form>
+			<p>
+          			
+				<label for="data">File Contents</label><br />
+				
+				Insert Text into the Textbox.
+        Each Line will become a textbox in the resulting diagram.
+        Create multiple boxes in one line and separate them with commas. 
+				
+        <textarea cols="60" rows="10" name="data" id="data">,A
+,B
+C1,C2,C3
+D,,E</textarea>
+  
+			</p>
+
+			<p>
+				<label for="sep">Separator between Cells on the same Line (default is comma):</label><br />
+				<input type="text" name="sep" value="," id="sep" />
+			</p>
+
+			<p>
+				<label for="filename">Filename</label><br />
+				<input type="text" name="filename" value="diagram.xml" id="filename" />
+			</p>
+
+			<p id="downloadify">
+				You must have Flash 10 installed to download this file.
+			</p>
+		</form>
+
+   <hr>
+     <center>
+       <small>
+         Created using <a href="https://github.com/blueimp/JavaScript-Templates" target="_blank">JavaScript-Templates</a> and <a href="https://github.com/dcneiner/Downloadify" target="_blank">Downloadify</a>. 
+       </small>
+     </center>
+	</body>
+
+</html>
