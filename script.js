@@ -1,6 +1,6 @@
 /*jslint sloppy: true, vars: true, white: true, browser: true, devel: true */      
 
-function convert2diagram(userinput,sep) {
+function convert2diagram(userinput,sep,box_style) {
 
   var page_default = {
     "page_width" : "800",
@@ -13,7 +13,9 @@ function convert2diagram(userinput,sep) {
     "x" : "10",
     "y" : "10",
     "width" : "120",
-    "height" : "60"
+    "height" : "60",
+    "box_style" : "",
+    "box_style_geo" : ""
   };
   var linesArray = userinput.split("\n");
   var y = 10;
@@ -40,6 +42,8 @@ function convert2diagram(userinput,sep) {
         box_data["value"] = cellsArray[j];
         box_data["x"] = x;
         box_data["id"] = id;
+        box_data["box_style"] = box_style;
+        box_data["box_style_geo"] = box_style;
         id = id + 1;
         var box_content = tmpl("tpl-textbox", box_data);
         box_array.push(box_content);
@@ -73,8 +77,9 @@ function load(swfPath,downloadImagePath){
 			data: function() { 
         var userinput = document.getElementById('data').value;
         var sep = document.getElementById('sep').value;
+        var box_style = document.getElementById('box_style').value;
         //alert(userinput);
-        var diagramcode = convert2diagram(userinput,sep);
+        var diagramcode = convert2diagram(userinput,sep,box_style);
         //alert(diagramcode);
 				return diagramcode;
 			},

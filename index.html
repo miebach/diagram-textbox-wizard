@@ -39,8 +39,8 @@
     </script>
 
     <script type="text/x-tmpl" id="tpl-textbox">
-      <mxCell id="{%=o.id%}" value="{%=o.value%}" parent="{%=o.parent%}" vertex="1">
-        <mxGeometry x="{%=o.x%}" y="{%=o.y%}" width="{%=o.width%}" height="{%=o.height%}" as="geometry"/>
+      <mxCell id="{%=o.id%}" value="{%=o.value%}" style="{%=o.box_style%}" parent="{%=o.parent%}" vertex="1">
+        <mxGeometry x="{%=o.x%}" y="{%=o.y%}" width="{%=o.width%}" height="{%=o.height%}" style="{%=o.box_style_geo%}" as="geometry"/>
       </mxCell>
     </script>
 
@@ -71,6 +71,15 @@
 C1,C2,C3
 D,,E</textarea>
   
+			</p>
+
+			<p>
+				<label for="sep">Additional style for boxes:</label>
+				<p style="font-size: 12px">
+        Example: word wrapping and left/top align of text: 
+        <pre>html=1;whiteSpace=wrap;align=left;verticalAlign=top</pre>
+				</p>
+				<input type="text" name="box_style" value="" id="box_style" />
 			</p>
 
 			<p>
